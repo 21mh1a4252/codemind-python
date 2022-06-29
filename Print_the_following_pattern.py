@@ -1,6 +1,10 @@
-N=int(input())
-for i in range(0,N):
-    for j in range(1,N+1):
-        if(i+j)==N or (i+j)<N:
-            print(j+i,end=' ')
+n=int(input())
+for i in range(n,0,-1):
+    for j in range(n,0,-1):
+        if i==j:
+            print(i,end=' ')
+        elif(i+j==n+1):
+            print(i,end=' ')
+        else:
+            print(' ',end='')
     print()
