@@ -1,13 +1,13 @@
-def rev(n):
-    re=0
-    while n:
-        r=n%10
-        re=re*10+r
-        n//=10
-    return re
-a=int(input())
-b=rev(a)
-if b==a:
-    print('True')
+def palin(v):
+    if len(v)<1:
+        return True
+    else:
+        if v[0]==v[-1]:
+            return palin(v[1:-1])
+        else:
+            return False
+a=input()
+if(palin(a)):
+    print("True")
 else:
-    print('False')
+    print("False")
