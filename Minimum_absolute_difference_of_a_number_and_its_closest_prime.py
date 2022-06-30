@@ -1,27 +1,31 @@
-def is_prime(j):
-    i=2
-    v=0
-    while i!=j:
-        if j%i==0:
-            v=1
-        i+=1
-    if v==0:
-        return j
-y = int(input())
-b=y
-for j in range(y,2,-1):
-    if is_prime(j):
-        n=j
-        break
-while b!=0:
-    if is_prime(b):
-        m=b
-        break
-    b+=1
-if (y-n)<(m-y):
-    print(abs(n-y))
-elif (y-n)==(m-y):
-    print(abs(n-y))
+def pri_left(x):
+    while x:
+        c=0
+        z=2
+        while z<=x//2:
+            if x%z==0:
+                c+=1
+            z+=1
+        if c==0:
+            return x
+        x-=1
+def pri_right(x):
+    while x:
+        c=0
+        z=2
+        while z<=x//2:
+            if x%z==0:
+                c+=1
+            z+=1
+        if c==0:
+            return x
+        x+=1
+n=int(input())
+left=n
+right=n
+I=pri_left(left)
+r=pri_right(right)
+if r-n<n-I:
+    print(r-n)
 else:
-    print(abs(m-y))
-    
+    print(n-I)
