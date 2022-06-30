@@ -1,14 +1,17 @@
-def rev(n):
-    rev=0
-    while n:
-        r=n%10
-        rev=rev*10+r
-        n//=10
-    return rev
-N=int(input())
-sqo=N*N
-sqr=rev(N)*rev(N)
-if sqo==rev(sqr):
-    print('True')
+x=int(input())
+n=x**2
+s=0
+while x!=0:
+    v=x%10
+    s=s*10+v
+    x=x//10
+m=s**2
+a=0
+while m!=0:
+    c=m%10
+    a=a*10+c
+    m=m//10
+if n==a:
+    print("True")
 else:
-    print('False')
+    print("False")
