@@ -1,9 +1,4 @@
-n=int(input())
-s=0
-while n:
-    s+=n%10
-    n//=10
-    if n==0 and s>9:
-        n=s
-        s=0
-print(s)
+num= int(input())
+def add_digits(num):
+        return (num - 1) % 9 + 1 if num > 0 else 0
+print(add_digits(num))
