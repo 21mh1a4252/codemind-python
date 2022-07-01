@@ -1,14 +1,10 @@
-a=int(input())
-b=int(input())
-while a<=b:
-    temp=a
-    di=0
-    d=0
-    while temp:
-        d+=1
-        if temp%10!=0 and a%(temp%10)==0:
-            di+=1
-        temp//=10
-    if di==d:
-        print(a,end=" ")
-    a+=1
+def self_dividing(n):
+    for d in str(n):
+        if d=='0' or n% int(d)>0:
+            return False
+    return True
+left=int(input())
+right=int(input())
+for n in range(left,right+1):
+    if self_dividing(n):
+        print(n,end=' ')
